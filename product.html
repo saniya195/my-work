@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/57935d90112915.Y3JvcCw4MDgsNjMyLDAsMA.png"
+                        alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li> <a href="index.html">Home</a></li>
+                        <li> <a href="product.html">Product</a></li>
+                        <li> <a href="about.html">About</a></li>
+                        <li> <a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="featured">
+        <div class="small-container">
+            <div class="row row-2">
+                <h1>All product</h1>
+                <input id="search" onkeyup="filter()" type="text" placeholder="search here">
+                <button onclick="sortList()" class="sortbtn">sort by price</button>
+            </div>
+            <div class="row" id="product-list">
+                <div class="col-4" data-target="#modal1">
+                    <img src="image/product1.png" alt="">
+                    <h4 class="product-name">Janan Intense</h4>
+                    <div class="rating">
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">☆</i>
+                        <i class="fa fa-star-o">☆</i>
+                    </div>
+                    <span>$10000</span>
+                </div>
+                <div class="col-4" data-target="#modal2">
+                    <img src="image/product2.png" alt="">
+                    <h4 class="product-name">Uroosa</h4>
+                    <div class="rating">
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">☆</i>
+                        <i class="fa fa-star-o">☆</i>
+                    </div>
+                    <span>$9000</span>
+                </div>
+                <div class="col-4" data-target="#modal3">
+                    <img src="image/product3.png" alt="">
+                    <h4 class="product-name">Zarar</h4>
+                    <div class="rating">
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star-half-o">☆</i>
+                    </div>
+                    <span>$12500</span>
+                </div>
+                <div class="col-4" data-target="#modal4">
+                    <img src="image/product4.png" alt="">
+                    <h4 class="product-name">ESSENCE</h4>
+                    <div class="rating">
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">☆</i>
+                        <i class="fa fa-star">☆</i>
+                        <i class="fa fa-star-half-o">☆</i>
+                    </div>
+                    <span>$11460</span>
+                </div>
+                <div class="col-4" data-target="#modal5">
+                    <img src="image/product5.png" alt="">
+                    <h4 class="product-name">FLORA</h4>
+                    <div class="rating">
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">☆</i>
+                        <i class="fa fa-star">☆</i>
+                        <i class="fa fa-star-half-o">☆</i>
+                    </div>
+                    <span>$7500</span>
+                </div>
+                <div class="col-4" data-target="#modal6">
+                    <img src="image/product6.png" alt="">
+                    <h4 class="product-name">ULTRA</h4>
+                    <div class="rating">
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">☆</i>
+                        <i class="fa fa-star-half-o">☆</i>
+                    </div>
+                    <span>$13000</span>
+                </div>
+                <div class="col-4" data-target="#modal7">
+                    <img src="image/product7.png" alt="">
+                    <h4 class="product-name">BARREL</h4>
+                    <div class="rating">
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">☆</i>
+                        <i class="fa fa-star-half-o">☆</i>
+                    </div>
+                    <span>$8000</span>
+                </div>
+                <div class="col-4" data-target="#modal8">
+                    <img src="image/product8.png" alt="">
+                    <h4 class="product-name">MIKA</h4>
+                    <div class="rating">
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">⭐</i>
+                        <i class="fa fa-star">☆</i>
+                        <i class="fa fa-star-half-o">☆</i>
+                    </div>
+                    <span>$6000</span>
+                </div>
+            </div>
+            <div class="page-btn">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>&#10137;</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <a href="index.html" class="logo-white">J.Perfume</a>
+                </div>
+                <div class="footer-col-2">
+                    <a href="index.html" class="logo-white">J.Perfume</a>
+                    <p>your one stop shop for all your perfume needs</p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">copyright 2024 - J.Perfume</p>
+        </div>
+    </div>
+    <div class="modal" id="modal1">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="image/product1.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home /Perfumes</p>
+                        <h1>janan</h1>
+                        <h4>price:10000</h4>
+                        <h4>Quantity:</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal2">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="image/product2.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home /Perfumes</p>
+                        <h1>Uroosa</h1>
+                        <h4>price:14000</h4>
+                        <h4>Quantity:</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal3">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="image/product3.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home /Perfumes</p>
+                        <h1>Zarar</h1>
+                        <h4>price:6000</h4>
+                        <h4>Quantity:</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal4">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="image/product4.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home /Perfumes</p>
+                        <h1>Essence</h1>
+                        <h4>price:12000</h4>
+                        <h4>Quantity:</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal5">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row row-2">
+                    <div class="col-2">
+                        <img src="image/product5.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home /Perfumes</p>
+                        <h1>Flora</h1>
+                        <h4>price:9500</h4>
+                        <h4>Quantity:</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal6">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row row-2">
+                    <div class="col-2">
+                        <img src="image/product6.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home /Perfumes</p>
+                        <h1>Ultra </h1>
+                        <h4>price:16000</h4>
+                        <h4>Quantity:</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal7">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row row-2">
+                    <div class="col-2">
+                        <img src="image/product7.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home /Perfumes</p>
+                        <h1>Barrel</h1>
+                        <h4>price:15000</h4>
+                        <h4>Quantity:</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal8">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row row-2">
+                    <div class="col-2">
+                        <img src="image/product8.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home /Perfumes</p>
+                        <h1>Mika</h1>
+                        <h4>price:12500</h4>
+                        <h4>Quantity:</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
